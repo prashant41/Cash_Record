@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Display Records</title>
+</head>
+<body>
+  <h1>Records</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Cash</th>
+        <th>Book</th>
+        <th>Delivery</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% data.forEach(function(record) { %>
+        <tr>
+          <td><%= record.cash %></td>
+          <td><%= record.book %></td>
+          <td><%= record.delivery %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  
+  <button onclick="displayRecords()">Display All Records</button>
+  
+  <script>
+    function displayRecords() {
+      window.location.href = "/display";
+    }
+  </script>
+  
+</body>
+</html>
